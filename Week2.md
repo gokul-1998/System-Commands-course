@@ -202,13 +202,39 @@
   - `exit 0` or `exit 1` or `exit <n>` exits with exit code n
   - Used when there are command dependencies (ie: run second command only if first command completes successfully)
 * **Flags set in bash** `echo $-`
-  - h : locate hash commands
+  - h : locate and hash commands
   - B : braceexpansion enabled
   - i : interactive mode
   - m : job control enabled (can be taken to bg or fg)
   - H : !style history substitution enabled
   - s : commands are read from stdin
   - c : commands are read from arguments
+
+* `echo hello            world` -> will print with only one space.enclose in double quotes to get the exact no of spaces.
+* `echo $USERNAME` or `echo "$USERNAME"` -> interpreted correctly
+* `echo '$USERNAME'` wont be interpretted
+* `echo $USER` same as $USERNAME
+* `echo $HOME` home directory
+* `echo $PWD` or `pwd` both same ,prints the present working directory
+* `echo $HOSTNAME` ->name of the host as given  in `cat /etc/hostname`
+* `echo "hostname is $HOSTNAME and user is $USERNAME"`
+* `echo "hostname is \$HOSTNAME and user is $USERNAME"` -> '\' escape the interpretation
+* `printenv` -> whole bunch of shell variables,all or part of environment
+* `printenv USERNAME`-> doesnot require $ sign to interpret
+* `env` is also the same
+* `set` -> variables and functions defined. long file.
+* `echo $PATH` -> executables ka path
+* `echo $0` -> name of the shell
+* `ksh` opens a kshell -> `echo $0` -> ksh,`exit` to come out.
+* `$$` -> pid
+* `ps` -> report a snap of current running processes.
+* `ps --forest` -> which process caused which process.
+* `ps -ef` ->all the processes.
+  - 1st one is /sbin/init 
+  - ppid -> parent pid
+* `ps -f` -> gives along with parent id
+* `ps -e` -> all the processes that are running.
+
 
 ### Linux Process Management
 * `sleep` command to create processes
