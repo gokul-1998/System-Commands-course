@@ -60,9 +60,9 @@
   - `echo ${myvar^^}` -> change all chars to upper case
  ### Restricting value types
  -  `declare -i myvar` -> only integers
-    * -l -> lower case
+    * -l -> lower case -> if we give caps it will convert to lower case and store
     * -u  -> upper case
-    * -r -> variable is read only,cant modify it.so start bash again to forget it.
+    * -r -> variable is read only,cant modify it.so start bash again to forget it.we can declare a variable and then also we can set it readonly
  -  `declare +i myvar` -> integer restriction removed.
     * +l -> lowercase restriction removed
     * +u -> uppercase restriction removed
@@ -71,6 +71,8 @@
  ### indexed array 
  index need not be continuous
   -  `declare -a arr` -> declare arr as an indexed array
+  -   `arr[0]=Sunday`
+  -   `arr[1]=Monday`
   -  `$arr[0]="value"` -> set value of element with index 0 in the array
   -   `echo ${arr[0]}` -> value of element with index 0 in the array
   -   `echo ${#arr[@]}` ->number of elements in the array
@@ -78,13 +80,20 @@
   -   `echo ${arr[@]}` -> dislpay all the values of the elements of the array
   -   `unset 'arr[2]'` -> delete element with index 2 in the array
   -   `arr+=("value")` -> append an element with a value to the end of the array
+  -   `arr=(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)` -> declare an array.with indices in order.
   
   ### associative arrays
   
    - `declare -A hash` -> declare hash as an associative array
+   -  `hash[0]="Amal"`
+   -  `hash[1]="Bimal"`
+   -  'hash["mm12b001"]="Charlie"`
    -  `$hash["a"]="value"` -> set value of element with index "a" in the array.
 
 Shell variable manipulations are fast.
+  -   `` myfiles=(`ls`) ``
+  -   `echo ${#myfiles[@]} ` -> count of files or folders in the folder
+  -   `echo ${!myfiles[@]}` -> indexes if the array
 
 
     
