@@ -258,8 +258,9 @@
 * `bash -c "echo \$-"` creates a child shell, gets the value of `echo $-`, gives the output to the parent shell
   - `bash -c "echo \$-; ps --forest;"` - multiple commands separated by ;
   - `bash -c "echo \$$ ; ps --forest ; exit 300"` : custom error code mod 256 = 44
+  - `echo $$` gives pid of the current shell.
 * `history` displays a list of commands that have been run on that computer
-  - `!n` executes command line no n displayed by `history`
+  - `!n` or `!198` executes command line no n displayed by `history`
   - useful for repeating long commands
   - The `H` flag in bash means the history is being recorded
 * Brace expansion option `B`
