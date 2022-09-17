@@ -7,7 +7,7 @@
 * Exporting a variable -> making a variable available for a shell spawned by the current shell.
   - `export myvar="value string"` or `myvar="value string";export myvar`
 ### Using variable values
-  * `echo $myvar` or `${myvar}` or `echo "${myvar}_something"`
+  * `echo $myvar` or `echo ${myvar}` or `echo "${myvar}_something"`
   * we can override the previously set variable value by assigning it again.
   * `myvar = 10` -> is not a valid assign because of the space.
   * `myvar=hello world` -> command not found: `echo $?` -> 127-> cmd not found.
