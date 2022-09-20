@@ -4,6 +4,7 @@
 * Executing Multiple Commands
   - `command1; command2; command3;`
     - Each command will be executed one after the other.
+    - `ls /blah;date;wc -l /etc/profile ;` -> even first command fails , the remaining commands will be executed.
   - `command1 && command2`
     - command2 will be executed only if command 1 succeeds
     - If the return code is 0 it is true and if it is greater than 0 it is false
@@ -28,9 +29,10 @@
   - Combining a command and a file
     - `command > file1` 
       - `stdout` is redirected to `file1`
-      - `file1` will be created if it does not exist
+      - `file1` will be created if it does not exist and we should have write permisiion to the directory.
       - if `file1` exists, its contents will be overwritten
       - example : `ls -1 /usr/bin > file1` - displays no output on the screen because there is no error
+      - `ls -1 /usr/bin` -> one file/folder per line.
       - `ls -1 /blah > file1` - displays an error. file1 is overwritten and is now 0 Bytes.
       - `hwinfo > hwinfo.txt`
       - trying this command in a folder where there is no w permissions will generate an error
