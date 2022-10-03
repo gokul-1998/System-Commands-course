@@ -31,4 +31,6 @@
    *  ` wc -l file `
    *  pipeline `who|grep "joy" >/dev/null`
    *  `!` for negation of the condition.
-   *  
+* `until condition do commands` -> loops continues until condition becomes true
+
+`my func() { commands }` call `myfunc`-> definitions must be before call.
