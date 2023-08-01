@@ -8,6 +8,7 @@
 * [Week 5](Week5.md)
 * [Week 6](Week6.md)
 * [Week 7](Week7.md)
+* [Week 8](Week8.md)
 
 #### Reference Books:
 * The Command Line - a complete introduction, by William Shotts. (ISBN: 9781593279523)
